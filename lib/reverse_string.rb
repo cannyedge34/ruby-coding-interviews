@@ -3,8 +3,9 @@
 # reverse string example method without reverse ruby method
 class ReverseString
   def call(string)
-    string.chars.reduce([]) do |acc, char|
-      acc.unshift(char)
-    end.join
+    reversed_string = ''
+    chars = string.chars
+    chars.size.times { reversed_string += chars.pop }
+    reversed_string
   end
 end
